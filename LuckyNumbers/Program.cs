@@ -13,7 +13,7 @@ namespace LuckyNumbers
             string action = "";
             do
             {
-                Console.WriteLine("Hello, welcome to the lucky numbers game."); // initial greeting
+                Console.WriteLine("Hello, welcome to the lucky numbers game."); 
                 Console.WriteLine("The jackpot is 300,000.");
                 Console.WriteLine("To get started, please enter the lowest number in the range.");
                 int rangeLow = int.Parse(Console.ReadLine());
@@ -39,9 +39,9 @@ namespace LuckyNumbers
                 for (int i =0; i<lotteryNumberSet.Length; i++)
                 {
                     lotteryNumberSet[i] = r.Next(rangeLow, rangeHigh);
-                    Console.WriteLine("Lucky Number : "+lotteryNumberSet[i]);
+                    Console.WriteLine("Lucky Number : " + lotteryNumberSet[i]);
                 }
-
+               
                 for (int i=0; i<lotteryNumberSet.Length; i++)
                 {
                     if (lotteryNumberSet[i] == userNumberSet[0])
@@ -81,7 +81,7 @@ namespace LuckyNumbers
             Console.WriteLine("Thanks for playing!");
             
         }
-        static double Winnings (int correctGuesses)
+        static double Winnings (double correctGuesses)
         {
             double lotteryWinnings = 300000 *(correctGuesses/6);
 
